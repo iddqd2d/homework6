@@ -42,7 +42,7 @@ public class FlowerStore {
     }
 
     public void calculateWallet(int countRose, int countChamomile, int countTulip) {
-        this.wallet += countRose * 100 + countChamomile * 70 + countTulip * 45;
+        this.wallet += countRose * Rose.COST + countChamomile * Chamomile.COST + countTulip * Tulip.COST;
     }
 
 }
