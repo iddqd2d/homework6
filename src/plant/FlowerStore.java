@@ -20,8 +20,7 @@ public class FlowerStore {
 
     public Flower[] sellSequence(int countRose, int countChamomile, int countTulip) {
 
-        int temp = countRose + countChamomile + countTulip;
-        Flower[] flowers = new Flower[temp];
+        Flower[] flowers = new Flower[countRose + countChamomile + countTulip];
         for (int i = 0; i < flowers.length; ) {
             if (countRose > 0) {
                 flowers[i++] = new Rose(this);
