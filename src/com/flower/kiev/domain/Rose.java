@@ -1,10 +1,8 @@
-package com.flower.kiev;
+package com.flower.kiev.domain;
 
 public class Rose extends Flower {
 
     public Rose() {
-        setCost(100);
+        super(100);
     }
-
-
 }

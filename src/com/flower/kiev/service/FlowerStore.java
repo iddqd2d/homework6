@@ -1,6 +1,9 @@
-package service;
+package com.flower.kiev.service;
 
-import com.flower.kiev.*;
+import com.flower.kiev.domain.Chamomile;
+import com.flower.kiev.domain.Flower;
+import com.flower.kiev.domain.Rose;
+import com.flower.kiev.domain.Tulip;
 
 import java.util.stream.Stream;
 
@@ -13,13 +16,12 @@ public class FlowerStore {
     }
 
     public Flower[] sell(int countRose, int countChamomile, int countTulip) {
-        return
+        return Stream.concat(
                 Stream.concat(
-                        Stream.concat(
-                                Stream.generate(() -> new Rose()).limit(countRose),
-                                Stream.generate(() -> new Chamomile()).limit(countChamomile)),
-                        Stream.generate(() -> new Tulip()).limit(countTulip)
-                ).toArray(Flower[]::new);
+                        Stream.generate(() -> new Rose()).limit(countRose),
+                        Stream.generate(() -> new Chamomile()).limit(countChamomile)),
+                Stream.generate(() -> new Tulip()).limit(countTulip)
+        ).toArray(Flower[]::new);
     }
 
     public Flower[] sellSequence(int countRose, int countChamomile, int countTulip) {

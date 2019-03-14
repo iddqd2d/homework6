@@ -1,9 +1,12 @@
-package com.flower.kiev;
+package com.flower.kiev.domain;
 
 
 public abstract class Flower {
-    protected int cost;
+    private int cost;
 
+    Flower(int cost) {
+        this.cost = cost;
+    }
 
     public int getCost() {
         return cost;

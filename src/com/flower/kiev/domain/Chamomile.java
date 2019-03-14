@@ -1,8 +1,8 @@
-package com.flower.kiev;
+package com.flower.kiev.domain;
 
 public class Chamomile extends Flower {
 
     public Chamomile() {
-        setCost(75);
+        super(75);
     }
 }

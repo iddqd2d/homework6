@@ -1,8 +1,8 @@
-package com.flower.kiev;
+package com.flower.kiev.domain;
 
 public class Tulip extends Flower {
 
     public Tulip() {
-        setCost(45);
+        super(45);
     }
 }
